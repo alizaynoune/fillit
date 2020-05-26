@@ -49,7 +49,7 @@ all: $(NAME)
 
 $(NAME) : $(OBJS)
 	@make -s -C libft/
-	@gcc $(OBJS) -L $(_PATH_LIBFT) $(_LIBFT) -o $(NAME)
+	@$(GCC) $(OBJS) -L $(_PATH_LIBFT) $(_LIBFT) -o $(NAME)
 	@echo "$(SILVER)[$(PURPLR)Binary file$(YELLOW) $(notdir $(NAME))$(SILVER)] $(GREEN)Created.$(DEF)"
 
 $(_PATH_OBJ)%.o: $(_PATH_FILE)%.c
